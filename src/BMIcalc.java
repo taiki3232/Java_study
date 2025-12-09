@@ -7,9 +7,9 @@ public class BMIcalc {
         int weight = sc.nextInt();
         System.out.println("身長(m)を入力してください(例:1.7)");
         double height = sc.nextDouble();
-        int BMI = (int) Math.floor(weight / (height * height));
-
-        System.out.println("あなたのBMIは" + BMI + "です");
+        int showBMI = (int) Math.floor(weight / (height * height));
+        double BMI = (weight / (height * height));
+        System.out.println("あなたのBMIは" + showBMI + "です");
 
         if (BMI < 18.5) {
             System.out.println("痩せ型です");
