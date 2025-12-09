@@ -10,5 +10,13 @@ public class BMIcalc {
         int BMI = (int) Math.floor(weight / (height * height));
 
         System.out.println("あなたのBMIは" + BMI + "です");
+
+        if (BMI < 18.5) {
+            System.out.println("痩せ型です");
+        } else if (BMI >= 25) { 
+            System.out.println("肥満です");
+        } else {
+            System.out.println("標準体型です");
+        }
     }
 }
