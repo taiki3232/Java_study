@@ -4,13 +4,14 @@ public class BMIcalc {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (true) {
+            User tanaka = new User();
 
             System.out.println("体重(kg)を入力してください");
-            double weight = sc.nextDouble();
+            tanaka.weight = sc.nextDouble();
             System.out.println("身長(m)を入力してください(例:1.7)");
-            double height = sc.nextDouble();
+            tanaka.height = sc.nextDouble();
 
-            double bmi = calcBMI(weight, height);
+            double bmi = tanaka.calcBMI();
 
             System.out.println("あなたのBMIは" + Math.floor(bmi) + "です");
 
@@ -29,10 +30,5 @@ public class BMIcalc {
                 break;
             }
         }
-    }
-
-    public static double calcBMI(double weight, double height) {
-        double BMI = (weight / (height * height));
-        return BMI;
     }
 }
